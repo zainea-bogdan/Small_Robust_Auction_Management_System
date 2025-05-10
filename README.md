@@ -1,9 +1,22 @@
 # 📄 README — Online Auction Platform Database
 
 ## 📌 Overview
+
 This project models a **relational database for an online auction platform**, providing functionality to manage users, products, bids, auctions, payments, and delivery statuses. The design ensures traceability, fairness, and security for both buyers and sellers.
 
-## 🧱 Database Structure
+---
+
+## 🗂️ Repository Structure
+
+- **`scripts/`**: SQL scripts to create tables, constraints, views, and sample exercises
+- **`data/`**: Excel file containing mock data for queries and testing
+- **`docs/`**: Documentation files describing the schema and project context
+- **`README.md`**: Project overview and setup guide
+- **`LICENSE`**: Open-source license information
+
+---
+
+## 🧱 Database Schema Overview
 
 - **`date_personale`**: Stores personal details of users.
 - **`cont_utilizator`**: Handles user accounts and roles (buyer/seller).
@@ -19,24 +32,30 @@ This project models a **relational database for an online auction platform**, pr
   - `vw_monitorizare_plata`: Tracks payment status.
   - `vw_monitorizare_livrare`: Tracks delivery progress.
 
-## 🔄 Functional Requirements (from project brief)
+---
+
+## 🔄 Functional Requirements
 
 1. **User Management**
+
    - Store and validate personal and account data.
    - Differentiate between sellers and buyers.
    - Maintain auction participation history.
 
 2. **Product Management**
+
    - Register products with starting price and category.
    - Ensure products are verified before auction.
    - Link each product to a seller.
 
 3. **Auction Management**
+
    - Schedule and manage auction lifecycles.
    - Support multiple statuses: active, completed, inactive, canceled.
    - Handle payment and delivery states.
 
 4. **Offer Management**
+
    - Record all bids with timestamp and user.
    - Mark the highest offer as the winner.
    - Automatically update offer statuses.
@@ -45,18 +64,42 @@ This project models a **relational database for an online auction platform**, pr
    - Monitor auction winners’ payment completion.
    - Provide live delivery monitoring through views.
 
+---
+
 ## 🛠 Notes
 
-- **Data Population**: Mock data is provided in an Excel file (`auxiliar.xlsx`) in the repository.
-- **Constraints & Validations**: Includes checks for date of birth, foreign key references, and status values.
-- **Execution Flow**: SQL scripts include creation and teardown of tables and views, along with logic to update auction outcomes.
+- **Data Population**: Use the Excel file in `data/mock data study case 2.xlsx`.
+- **Schema & Context**: See `docs/database design schema.pdf` and `docs/exercise context study case 2.pdf`.
+- **SQL Setup**: Run the file `scripts/Creating_tables_and_small_exercises.sql` to initialize the schema.
+
+---
 
 ## 🔧 Project Scope
 
-This version includes **only the basic structural and functional components** required to support core auction operations. Additional features such as user roles, product images, messaging, notifications, or analytics may be integrated in future updates as needed.
+This release includes **only core functionality** for managing auctions and transactions in a minimal, structured environment. Future enhancements may include:
+
+- Support for images, reviews, and notifications
+- Enhanced security & access roles
+- Analytics and audit logging features
+
+---
 
 ## 🚀 Getting Started
 
-1. Run the provided SQL script in Oracle SQL Developer or another PL/SQL-compatible environment.
-2. Import mock data using the Excel sheet.
-3. Use the provided views and update scripts to simulate auction outcomes.
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/zainea-bogdan/Small_Robust_Auction_Management_System.git
+   ```
+
+2. Run the SQL scripts from `scripts/` in Oracle SQL Developer or compatible environment.
+
+3. Load mock data from the `data/` Excel file.
+
+4. Use the views and update queries to test auction logic, winner selection, and transaction tracking.
+
+---
+
+## 📜 License
+
+This project is licensed under the [GPL-3.0 License](./LICENSE).
