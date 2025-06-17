@@ -1,5 +1,13 @@
 # 📄 README — Online Auction Platform Database
 
+<p align="center">
+  <img src="./small auction logo.png" alt="Logo" width="600">
+</p>
+<p align="center">
+  <em>Created using Canva AI tools. I do not claim ownership of the visual elements.<br>
+  If this image presents an issue, please feel free to contact me.</em>
+</p>
+
 ## 📌 Overview
 
 This project models a **relational database for an online auction platform**, providing functionality to manage users, products, bids, auctions, payments, and delivery statuses. The design ensures traceability, fairness, and security for both buyers and sellers.
